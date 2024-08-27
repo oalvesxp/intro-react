@@ -1,2 +1,2 @@
-# intro-react
-Introdução a React
+# React Fundamentals
+Curso introdutório de react JS.
