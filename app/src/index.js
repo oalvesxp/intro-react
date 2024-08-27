@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import book from './assets/book-1.jpg'
 import './index.css'
 
 const BookList = () => {
@@ -22,9 +23,7 @@ const Book = () => {
   )
 }
 
-const Image = () => (
-  <img src="https://m.media-amazon.com/images/I/91w-SqrDpnL._SY342_.jpg" />
-)
+const Image = () => <img src={book} alt="A lenda de Ruff Ghanor Vol. 1" />
 const Title = () => <h2>A Lenda de Ruff Ghanor: O Garoto-Cabra</h2>
 const Author = () => <h4>Leonel Caldela</h4>
 
