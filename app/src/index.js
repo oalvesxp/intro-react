@@ -2,12 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 function Greetering() {
-  // return <h2>My First Component</h2>
-  // return React.createElement('h2', {}, 'My First Component')
-  return React.createElement(
-    'div',
-    {},
-    React.createElement('h2', {}, 'My First Component')
+  return (
+    // <React.Fragment>
+    <>
+      <h3>My First Fragment</h3>
+      <ul>
+        <li>Hello world!</li>
+      </ul>
+    </>
+    /* </React.Fragment> */
   )
 }
 
