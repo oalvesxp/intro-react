@@ -41,3 +41,11 @@ body {
   margin-top: 1rem;
   font-size: 1rem;
 }
+
+.book h4 {
+  color: #e87202;
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}

@@ -14,27 +14,16 @@ const BookList = () => {
 }
 
 const Book = () => {
+  const title = 'A Lenda de Ruff Ghanor: O Garoto-Cabra'
+  const author = 'Leonel Caldela'
+
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src={book} alt="A lenda de Ruff Ghanor Vol. 1" />
+      <h2>{title}</h2>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   )
-}
-
-const Image = () => <img src={book} alt="A lenda de Ruff Ghanor Vol. 1" />
-const Title = () => <h2>A Lenda de Ruff Ghanor: O Garoto-Cabra</h2>
-
-const Author = () => {
-  const inLine = {
-    color: '#e87202',
-    fontSize: '0.75',
-    fontStyle: 'italic',
-    fontWeight: '500',
-    marginTop: '0.75rem',
-  }
-  return <h4 style={inLine}>Leonel Caldela</h4>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
