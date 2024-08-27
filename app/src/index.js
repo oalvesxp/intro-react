@@ -1,19 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-function Greetering() {
+const BookList = () => {
   return (
-    // <React.Fragment>
-    <>
-      <Person />
-      <Message />
-    </>
-    /* </React.Fragment> */
+    <section>
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
 
-const Person = () => <h2>John Doe</h2>
-const Message = () => <p>This is my message.</p>
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
+}
+
+const Image = () => (
+  <img src="https://m.media-amazon.com/images/I/81IOICDo00L._SY466_.jpg" />
+)
+const Title = () => <h2>Batalha do Apocalipse</h2>
+const Author = () => <h4>Eduardo Spohr</h4>
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Greetering />)
+root.render(<BookList />)
