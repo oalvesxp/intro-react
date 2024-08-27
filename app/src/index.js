@@ -5,14 +5,15 @@ function Greetering() {
   return (
     // <React.Fragment>
     <>
-      <h3>My First Fragment</h3>
-      <ul>
-        <li>Hello world!</li>
-      </ul>
+      <Person />
+      <Message />
     </>
     /* </React.Fragment> */
   )
 }
+
+const Person = () => <h2>John Doe</h2>
+const Message = () => <p>This is my message.</p>
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(<Greetering />)
