@@ -10,16 +10,19 @@ const books = [
     title: 'A Lenda de Ruff Ghanor: O Garoto-Cabra',
     author: 'Leonel Caldela',
     img: book1,
+    id: 1,
   },
   {
     title: 'OZOB: Protocolo Molotov',
     author: 'Deive Pazos',
     img: book2,
+    id: 2,
   },
   {
     title: 'O cavaleiro dos Sete Reinos',
     author: 'George R. R. Martin',
     img: book3,
+    id: 3,
   },
 ]
 
@@ -27,16 +30,14 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { img, title, author } = book
-        return <Book img={img} title={title} author={author} />
+        const { img, title, author, id } = book
+        return <Book img={img} title={title} author={author} key={id} />
       })}
     </section>
   )
 }
 
 const Book = ({ img, title, author, children }) => {
-  // const { img, title, author } = props
-
   return (
     <article className="book">
       <img src={img} alt={title} />
