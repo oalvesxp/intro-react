@@ -47,28 +47,19 @@ const BookList = () => {
 }
 
 const EventExamples = () => {
-  const handleInput = (e) => {
-    console.log(`Input Name: ${e.target.name}`)
-    console.log(`Input Value: ${e.target.value}`)
-  }
-
-  const handleButtonClick = () => {
-    alert('handle button click')
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submited')
-  }
-
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          console.log('form submited')
+        }}
+      >
         <h2>Formulário</h2>
         <input
           type="text"
           name="example"
-          onChange={handleInput}
+          onChange={(e) => console.log(`Input value: ${e.target.value}`)}
           style={{ margin: '1rem 0', padding: '0.2rem' }}
         />
         <button
@@ -86,7 +77,7 @@ const EventExamples = () => {
         <div>
           <button
             type="button"
-            onClick={handleButtonClick}
+            onClick={() => alert('handle button click')}
             style={{
               padding: '6px 12px',
               border: 'none',
