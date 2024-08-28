@@ -29,15 +29,60 @@ const books = [
 const BookList = () => {
   return (
     <section className="booklist">
+      <EventExamples />
       {books.map((book) => {
-        // return <Book book={book} key={book.id} />
-        return <Book {...book} key={book.id} />
+        return (
+          <Book {...book} key={book.id}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              eius aperiam voluptatem neque quas. Sunt expedita eveniet neque
+              dolore culpa.
+            </p>
+            <button>Saiba Mais</button>
+          </Book>
+        )
       })}
     </section>
   )
 }
 
-// const Book = ({ book: { img, title, author, children }}) => {
+const EventExamples = () => {
+  const handle = () => {
+    console.log('handle form input')
+  }
+
+  const handleButtonClick = () => {
+    alert('handle button click')
+  }
+
+  return (
+    <section>
+      <form>
+        <h2>Formulário</h2>
+        <input
+          type="text"
+          name="example"
+          onChange={handle}
+          style={{ margin: '1rem 0', padding: '0.2rem' }}
+        />
+      </form>
+      <button
+        type="submit"
+        onClick={handleButtonClick}
+        style={{
+          padding: '6px 12px',
+          border: 'none',
+          borderRadius: '4px',
+          background: 'rgb(54, 54, 54)',
+          color: '#FAFAFA',
+        }}
+      >
+        Clique Aqui
+      </button>
+    </section>
+  )
+}
+
 const Book = ({ img, title, author, children }) => {
   return (
     <article className="book">
