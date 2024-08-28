@@ -11,11 +11,16 @@ const BookList = () => {
   }
 
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        return <Book {...book} key={book.id} getBook={getBook} number={index} />
-      })}
-    </section>
+    <>
+      <h1>Amazon best sellers</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          return (
+            <Book {...book} key={book.id} getBook={getBook} number={index} />
+          )
+        })}
+      </section>
+    </>
   )
 }
 

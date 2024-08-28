@@ -11,10 +11,17 @@ body {
   color: #222;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  color: rgb(54, 54, 54);
+}
+
 .booklist {
   width: 90vw;
   max-width: 1170px;
-  margin: 5rem auto;
+  margin: 2rem auto;
   display: grid;
   gap: 2rem;
 }
