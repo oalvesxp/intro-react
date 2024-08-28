@@ -71,19 +71,34 @@ const EventExamples = () => {
           onChange={handleInput}
           style={{ margin: '1rem 0', padding: '0.2rem' }}
         />
+        <button
+          type="submit"
+          style={{
+            padding: '6px 12px',
+            border: 'none',
+            borderRadius: '4px',
+            background: 'rgb(54, 54, 54)',
+            color: '#FAFAFA',
+          }}
+        >
+          Buscar
+        </button>
+        <div>
+          <button
+            type="button"
+            onClick={handleButtonClick}
+            style={{
+              padding: '6px 12px',
+              border: 'none',
+              borderRadius: '4px',
+              background: 'rgb(54, 54, 54)',
+              color: '#FAFAFA',
+            }}
+          >
+            Clique Aqui
+          </button>
+        </div>
       </form>
-      <button
-        onClick={handleButtonClick}
-        style={{
-          padding: '6px 12px',
-          border: 'none',
-          borderRadius: '4px',
-          background: 'rgb(54, 54, 54)',
-          color: '#FAFAFA',
-        }}
-      >
-        Clique Aqui
-      </button>
     </section>
   )
 }
