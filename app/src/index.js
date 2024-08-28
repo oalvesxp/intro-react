@@ -26,14 +26,34 @@ const third = {
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book img={first.img} title={first.title} author={first.author} />
-      <Book img={second.img} title={second.title} author={second.author} />
-      <Book img={third.img} title={third.title} author={third.author} />
+      <Book img={first.img} title={first.title} author={first.author}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          architecto magnam non. Autem, corporis. Quas earum consectetur
+          assumenda explicabo sapiente.
+        </p>
+        <button>Saiba Mais</button>
+      </Book>
+      <Book img={second.img} title={second.title} author={second.author}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+          commodi voluptatum culpa praesentium et laborum.
+        </p>
+        <button>Saiba Mais</button>
+      </Book>
+      <Book img={third.img} title={third.title} author={third.author}>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+          blanditiis asperiores voluptates suscipit beatae nemo magnam
+          provident.
+        </p>
+        <button>Saiba Mais</button>
+      </Book>
     </section>
   )
 }
 
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, children }) => {
   // const { img, title, author } = props
 
   return (
@@ -41,6 +61,7 @@ const Book = ({ img, title, author }) => {
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
+      {children}
     </article>
   )
 }

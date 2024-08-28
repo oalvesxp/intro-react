@@ -22,6 +22,7 @@ body {
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
   }
 }
 
@@ -48,4 +49,25 @@ body {
   font-style: italic;
   font-weight: 500;
   margin-top: 0.75rem;
+}
+
+.book p {
+  margin: 1rem 0;
+}
+
+.book button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: rgb(54, 54, 54);
+  color: #f1f5f8;
+  font-size: 0.85rem;
+}
+
+.book button:hover {
+  background: #e87202;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-delay: 50ms;
+  transform: scale(1.1);
 }
