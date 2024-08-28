@@ -31,11 +31,25 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  position: relative;
 }
 
 .book img {
   width: 100%;
   object-fit: cover;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 1rem 0.75rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #e87202;
+  color: #fafafa;
+  font-weight: 500;
 }
 
 .book h2 {
