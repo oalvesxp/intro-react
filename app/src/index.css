@@ -56,6 +56,7 @@ body {
 }
 
 .book button {
+  margin-top: 1rem;
   padding: 8px 12px;
   border-radius: 6px;
   border: none;
