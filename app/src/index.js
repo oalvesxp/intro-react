@@ -5,23 +5,30 @@ import book2 from './assets/book-2.jpg'
 import book3 from './assets/book-3.jpg'
 import './index.css'
 
-const title = 'A Lenda de Ruff Ghanor: O Garoto-Cabra'
-const author = 'Leonel Caldela'
+const first = {
+  title: 'A Lenda de Ruff Ghanor: O Garoto-Cabra',
+  author: 'Leonel Caldela',
+  img: book1,
+}
+
+const second = {
+  title: 'OZOB: Protocolo Molotov',
+  author: 'Deive Pazos',
+  img: book2,
+}
+
+const third = {
+  title: 'O cavaleiro dos Sete Reinos',
+  author: 'George R. R. Martin',
+  img: book3,
+}
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book
-        img={book1}
-        title="A Lenda de Ruff Ghanor: O Garoto-Cabra"
-        author="Leonel Caldela"
-      />
-      <Book img={book2} title="OZOB: Protocolo Molotov" author="Deive Pazos" />
-      <Book
-        img={book3}
-        title="O cavaleiro dos Sete Reinos"
-        author="George R. R. Martin"
-      />
+      <Book img={first.img} title={first.title} author={first.author} />
+      <Book img={second.img} title={second.title} author={second.author} />
+      <Book img={third.img} title={third.title} author={third.author} />
     </section>
   )
 }
